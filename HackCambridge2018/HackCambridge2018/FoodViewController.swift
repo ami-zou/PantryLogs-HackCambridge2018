@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  FoodViewController.swift
 //  HackCambridge2018
 //
 //  Created by Ami Zou on 1/20/18.
@@ -8,21 +8,17 @@
 
 import UIKit
 
-class FoodViewController: UIViewController {
-    //MARK: Propertities
+class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
     
-    //MARK: Private Methods
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
-
+    
+    
 }
-
