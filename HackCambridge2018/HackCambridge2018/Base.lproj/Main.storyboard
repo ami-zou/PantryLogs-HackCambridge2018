@@ -14,7 +14,7 @@
         <!--Food Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" userLabel="Food Controller" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" userLabel="Food Controller" customClass="FoodViewController" customModule="HackCambridge2018" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,11 +55,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ITF-5u-x4y">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ITF-5u-x4y">
                                 <rect key="frame" x="0.0" y="58" width="375" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodItemTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="kl0-yf-IDa" customClass="FoodItemTableViewCell" customModule="HackCambridge2018" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodItemTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodItemTableViewCell" rowHeight="90" id="kl0-yf-IDa" customClass="FoodItemTableViewCell" customModule="HackCambridge2018" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kl0-yf-IDa" id="1F5-dh-g7q">
@@ -87,6 +87,11 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="daysLeft" destination="tii-nM-oJO" id="OKg-Uo-qiJ"/>
+                                            <outlet property="foodImage" destination="IDQ-jN-c8C" id="eMX-gD-lP1"/>
+                                            <outlet property="foodName" destination="2ZV-Bo-8Cn" id="t8A-iM-JbC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -112,6 +117,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Food" image="Food" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="tableView" destination="ITF-5u-x4y" id="INh-sz-TB2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,7 +253,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-jB-o1h">
-                                <rect key="frame" x="146" y="9" width="83" height="41"/>
+                                <rect key="frame" x="146" y="9" width="83" height="41.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rcv-jB-o1h" secondAttribute="height" multiplier="2:1" id="cYu-Mu-fbL"/>
                                 </constraints>
@@ -286,7 +294,6 @@
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="1Ki-rH-o5y" kind="relationship" relationship="viewControllers" id="jNt-P9-lS6"/>
-                        <segue destination="oaL-oS-Cxs" kind="relationship" relationship="viewControllers" id="yeV-Fk-uVn"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="jtK-mg-Iuc"/>
                     </connections>
                 </tabBarController>
