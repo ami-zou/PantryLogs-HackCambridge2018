@@ -8,19 +8,25 @@
 
 import UIKit
 
-class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     //MARK: Properties
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchbar: UISearchBar!
+    var isSearching = false
     var foods = [Food]() //var foods: [Food]? = []
+    var filteredFoods = [Food]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //***Fetching articles from News API***//
         
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        searchbar.delegate = self
+        searchbar.returnKeyType = UIReturnKeyType.done
         
         loadSampleFoods()
         fetchFoods(website: "HP")
@@ -54,6 +60,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //if searching, return filtered datafiltered
+        if isSearching {
+            return self.filteredFoods.count
+        }
+        
         return self.foods.count
         //return self.articles?.count ?? 0 //one-line if statement: or else return 0
         //return 0
@@ -70,7 +81,13 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.desc.text = self.articles?[indexPath.item].desc
         cell.imgView.downloadImage(from: (self.articles?[indexPath.item].imageUrl!)! ) //remember to unwrap
      */
-        let food = foods[indexPath.row]
+        let food: Food!
+        
+        if isSearching {
+            food = filteredFoods[indexPath.row]
+        }else{
+            food = foods[indexPath.row]
+        }
         
         //configure the cell
         cell.foodName.text = food.name
@@ -81,7 +98,9 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     //MARK: Search Bar
-    
+    func searchbar(_ searchbar: UISearchBar, textDidChange searchText: String){
+        
+    }
 
     
 
