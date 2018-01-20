@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A6193711201389160008FD9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193710201389160008FD9A /* AppDelegate.swift */; };
-		A6193713201389160008FD9A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193712201389160008FD9A /* FirstViewController.swift */; };
-		A6193715201389160008FD9A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193714201389160008FD9A /* SecondViewController.swift */; };
+		A6193713201389160008FD9A /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193712201389160008FD9A /* FoodViewController.swift */; };
+		A6193715201389160008FD9A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193714201389160008FD9A /* RecipeViewController.swift */; };
 		A6193718201389160008FD9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6193716201389160008FD9A /* Main.storyboard */; };
 		A619371A201389160008FD9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6193719201389160008FD9A /* Assets.xcassets */; };
 		A619371D201389160008FD9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A619371B201389160008FD9A /* LaunchScreen.storyboard */; };
 		A6193728201389160008FD9A /* HackCambridge2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193727201389160008FD9A /* HackCambridge2018Tests.swift */; };
 		A6193733201389160008FD9A /* HackCambridge2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193732201389160008FD9A /* HackCambridge2018UITests.swift */; };
+		A619374120138CF40008FD9A /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619374020138CF40008FD9A /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,8 @@
 /* Begin PBXFileReference section */
 		A619370D201389160008FD9A /* HackCambridge2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackCambridge2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6193710201389160008FD9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A6193712201389160008FD9A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A6193714201389160008FD9A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A6193712201389160008FD9A /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		A6193714201389160008FD9A /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		A6193717201389160008FD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6193719201389160008FD9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A619371C201389160008FD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		A619372E201389160008FD9A /* HackCambridge2018UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackCambridge2018UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6193732201389160008FD9A /* HackCambridge2018UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackCambridge2018UITests.swift; sourceTree = "<group>"; };
 		A6193734201389160008FD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A619374020138CF40008FD9A /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				A6193710201389160008FD9A /* AppDelegate.swift */,
-				A6193712201389160008FD9A /* FirstViewController.swift */,
-				A6193714201389160008FD9A /* SecondViewController.swift */,
+				A6193712201389160008FD9A /* FoodViewController.swift */,
+				A6193714201389160008FD9A /* RecipeViewController.swift */,
+				A619374020138CF40008FD9A /* UserViewController.swift */,
 				A6193716201389160008FD9A /* Main.storyboard */,
 				A6193719201389160008FD9A /* Assets.xcassets */,
 				A619371B201389160008FD9A /* LaunchScreen.storyboard */,
@@ -262,9 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6193715201389160008FD9A /* SecondViewController.swift in Sources */,
+				A6193715201389160008FD9A /* RecipeViewController.swift in Sources */,
+				A619374120138CF40008FD9A /* UserViewController.swift in Sources */,
 				A6193711201389160008FD9A /* AppDelegate.swift in Sources */,
-				A6193713201389160008FD9A /* FirstViewController.swift in Sources */,
+				A6193713201389160008FD9A /* FoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

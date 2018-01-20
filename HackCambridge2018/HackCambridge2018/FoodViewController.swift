@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  HackCambridge2018
 //
 //  Created by Ami Zou on 1/20/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FoodViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
