@@ -8,20 +8,22 @@
 
 import UIKit
 
-class FoodTableViewController: UITableViewController {
+class FoodTableViewController: UITableViewController{
     //MARK: Properties
-    var food = [Food]()
+    var foods = [Food]()
     
     //MARK: Private Methods
     
     private func loadSampleFoods() {
+        //let image1 = UIImage(cgImage: #imageLiteral(resourceName: "tomato01") as! CGImage)
         let image1 = UIImage(named: "tomato01")
         
         guard let food1 = Food(name: "tomato", daysLeft: 0, image: image1!) else {
             fatalError("Unable to instantiate food1")
         }
         
-        food += [food1]
+        //foods += [food1]
+        foods.append(food1)
     }
     
     override func viewDidLoad() {
@@ -39,24 +41,32 @@ class FoodTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return foods.count 
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "FoodItemTableViewCell"
 
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FoodItemTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
+        
+            // Fetches the appropriate meal for the data source layout.
+        let food = foods[indexPath.row]
+        
+        //configure the cell
+        cell.foodName.text = food.name
+        cell.daysLeft.text = "0 days" //String(format:"%@ days", food.daysLeft)
+        cell.foodImage.image = food.image
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

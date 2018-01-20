@@ -155,9 +155,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="DayLeftLabel" destination="xhk-iO-xpS" id="YhA-5f-an1"/>
-                                    <outlet property="FoodImageView" destination="c3e-FO-cZ9" id="2CD-aS-e46"/>
-                                    <outlet property="NameLabel" destination="3nF-f1-x38" id="C48-ux-biD"/>
+                                    <outlet property="daysLeft" destination="xhk-iO-xpS" id="wPk-Yj-wE1"/>
+                                    <outlet property="foodImage" destination="c3e-FO-cZ9" id="1CQ-qk-sdo"/>
+                                    <outlet property="foodName" destination="3nF-f1-x38" id="h1U-du-Oed"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
