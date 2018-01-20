@@ -3,7 +3,7 @@
 //  HackCambridge2018UITests
 //
 //  Created by Ami Zou on 1/20/18.
-//  Copyright © 2018 Gamma Lab. All rights reserved.
+//  Copyright © 2018 Women Hackers. All rights reserved.
 //
 
 import XCTest
