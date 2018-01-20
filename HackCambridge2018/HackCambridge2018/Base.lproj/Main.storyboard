@@ -95,7 +95,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXZ-nh-J3z">
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="AXZ-nh-J3z">
                                 <rect key="frame" x="0.0" y="49" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -123,6 +123,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Food" image="fruit_icon02" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="searchbar" destination="AXZ-nh-J3z" id="o5d-Hf-O80"/>
                         <outlet property="tableView" destination="ITF-5u-x4y" id="INh-sz-TB2"/>
                     </connections>
                 </viewController>
@@ -237,15 +238,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZk-aF-RQU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QZk-aF-RQU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="DtB-bA-xUd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="APP NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-jB-o1h">
-                                <rect key="frame" x="115.5" y="-6.5" width="144.5" height="72.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-jB-o1h">
+                                <rect key="frame" x="115" y="-7" width="145" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rcv-jB-o1h" secondAttribute="height" multiplier="2:1" id="cYu-Mu-fbL"/>
                                 </constraints>
@@ -259,6 +260,7 @@
                             <constraint firstItem="QZk-aF-RQU" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="B0H-IP-ucM"/>
                             <constraint firstItem="rcv-jB-o1h" firstAttribute="centerY" secondItem="QZk-aF-RQU" secondAttribute="centerY" id="G1k-yH-Bfb"/>
                             <constraint firstItem="rcv-jB-o1h" firstAttribute="centerX" secondItem="QZk-aF-RQU" secondAttribute="centerX" id="IjB-BA-mZe"/>
+                            <constraint firstAttribute="trailing" secondItem="QZk-aF-RQU" secondAttribute="trailing" id="Jz2-Ax-bE6"/>
                             <constraint firstItem="QZk-aF-RQU" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="No9-cJ-LwP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>

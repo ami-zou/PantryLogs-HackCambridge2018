@@ -8,14 +8,14 @@
 
 import UIKit
 
-class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    
+class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     //MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchbar: UISearchBar!
     var isSearching = false
     var foods = [Food]() //var foods: [Food]? = []
     var filteredFoods = [Food]()
+    var searchController: UISearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +62,10 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //if searching, return filtered datafiltered
         if isSearching {
-            return self.filteredFoods.count
+            return filteredFoods.count
         }
         
-        return self.foods.count
+        return foods.count
         //return self.articles?.count ?? 0 //one-line if statement: or else return 0
         //return 0
     }
@@ -98,12 +98,58 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     //MARK: Search Bar
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchbar.text == nil || searchbar.text == "" {
+            print("it's 103")
+            
+            isSearching = false
+            
+            view.endEditing(true)
+            
+            tableView.reloadData()
+        } else {
+            isSearching = true
+            
+            // filteredFoods = foods.filter({$0 == searchbar.text!})
+            // filteredArray = categoryArray.filter ({$0.title.lowercased().range(of: searchText.lowercased()) != nil})
+            
+            let searchText = searchText.lowercased()
+            filteredFoods = foods.filter({$0.name.lowercased().range(of: searchText.lowercased()) != nil})
+            
+            //If want more filters
+            // filteredArray += self.itemArray.filter({$0. subtitle.lowercaseString.rangeOfString(searchText) != nil})
+           
+    
+            tableView.reloadData()
+        }
+    }
+    
+   //Search Bar Extending UISearchResultsUpdating
+   /*
     func searchbar(_ searchbar: UISearchBar, textDidChange searchText: String){
         
     }
 
+    func configureSearchController() {
+        searchController = UISearchController(searchResultsController: nil)
+        
+        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        
+        searchController.searchBar.placeholder = "Search here..."
+        
+        searchController.searchBar.delegate = self
+        
+        searchController.searchBar.sizeToFit()
+        
+      //  tblSearchResults.tableHeaderView = searchController.searchBar
+        
+        
+    }
     
-
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    */
 
     /* //Initalize a view page for the specific recipe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
