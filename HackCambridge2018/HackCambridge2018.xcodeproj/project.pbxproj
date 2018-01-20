@@ -16,6 +16,7 @@
 		A6193728201389160008FD9A /* HackCambridge2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193727201389160008FD9A /* HackCambridge2018Tests.swift */; };
 		A6193733201389160008FD9A /* HackCambridge2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193732201389160008FD9A /* HackCambridge2018UITests.swift */; };
 		A619374120138CF40008FD9A /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619374020138CF40008FD9A /* UserViewController.swift */; };
+		A61937432013928A0008FD9A /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A6193732201389160008FD9A /* HackCambridge2018UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackCambridge2018UITests.swift; sourceTree = "<group>"; };
 		A6193734201389160008FD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A619374020138CF40008FD9A /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				A6193710201389160008FD9A /* AppDelegate.swift */,
 				A6193712201389160008FD9A /* FoodViewController.swift */,
+				A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */,
 				A6193714201389160008FD9A /* RecipeViewController.swift */,
 				A619374020138CF40008FD9A /* UserViewController.swift */,
 				A6193716201389160008FD9A /* Main.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A61937432013928A0008FD9A /* FoodItemTableViewCell.swift in Sources */,
 				A6193715201389160008FD9A /* RecipeViewController.swift in Sources */,
 				A619374120138CF40008FD9A /* UserViewController.swift in Sources */,
 				A6193711201389160008FD9A /* AppDelegate.swift in Sources */,
