@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     //MARK: Properties
     @IBOutlet weak var tableView: UITableView!
@@ -79,6 +79,8 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    //MARK: Search Bar
     
 
     

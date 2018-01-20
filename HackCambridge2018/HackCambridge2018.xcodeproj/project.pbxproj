@@ -91,6 +91,7 @@
 				A6193726201389160008FD9A /* HackCambridge2018Tests */,
 				A6193731201389160008FD9A /* HackCambridge2018UITests */,
 				A619370E201389160008FD9A /* Products */,
+				A619374E2013F9870008FD9A /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,14 +108,11 @@
 		A619370F201389160008FD9A /* HackCambridge2018 */ = {
 			isa = PBXGroup;
 			children = (
+				A61937522013FAF20008FD9A /* User */,
+				A61937502013FADA0008FD9A /* Recipe */,
+				A619374F2013FAD00008FD9A /* Food */,
 				A6193710201389160008FD9A /* AppDelegate.swift */,
-				A61937462013B1AD0008FD9A /* FoodTableViewController.swift */,
-				A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */,
-				A61937482013BD000008FD9A /* Food.swift */,
-				A6193714201389160008FD9A /* RecipeViewController.swift */,
-				A619374020138CF40008FD9A /* UserViewController.swift */,
 				A6193716201389160008FD9A /* Main.storyboard */,
-				A619374A2013E0660008FD9A /* FoodViewController.swift */,
 				A6193719201389160008FD9A /* Assets.xcassets */,
 				A619371B201389160008FD9A /* LaunchScreen.storyboard */,
 				A619371E201389160008FD9A /* Info.plist */,
@@ -138,6 +136,40 @@
 				A6193734201389160008FD9A /* Info.plist */,
 			);
 			path = HackCambridge2018UITests;
+			sourceTree = "<group>";
+		};
+		A619374E2013F9870008FD9A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A61937462013B1AD0008FD9A /* FoodTableViewController.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A619374F2013FAD00008FD9A /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */,
+				A619374A2013E0660008FD9A /* FoodViewController.swift */,
+				A61937482013BD000008FD9A /* Food.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		A61937502013FADA0008FD9A /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				A6193714201389160008FD9A /* RecipeViewController.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		A61937522013FAF20008FD9A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A619374020138CF40008FD9A /* UserViewController.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
