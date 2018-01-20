@@ -80,7 +80,7 @@
                                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDQ-jN-c8C">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tomato01" translatesAutoresizingMaskIntoConstraints="NO" id="IDQ-jN-c8C">
                                                     <rect key="frame" x="24" y="-1" width="84" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -305,5 +305,6 @@
     <resources>
         <image name="Food" width="30" height="30"/>
         <image name="Recipe" width="30" height="30"/>
+        <image name="tomato01" width="231" height="219"/>
     </resources>
 </document>

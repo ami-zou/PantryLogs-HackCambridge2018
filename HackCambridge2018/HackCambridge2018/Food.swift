@@ -12,7 +12,7 @@ class Food {
     var name: String
     var expirationDate: Date
     var daysLeft: Int
-    var image: UIImage?
+    var image: UIImage
     
     init() {
         name = "Food"
@@ -28,7 +28,7 @@ class Food {
         self.image = UIImage()
     }
     
-    init?(name: String, daysLeft: Int, image: UIImage) {
+    init!(name: String, daysLeft: Int, image: UIImage) {
         //test case: fail if name is empty
         if name.isEmpty {
             return nil

@@ -9,29 +9,38 @@
 import UIKit
 
 class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     //MARK: Properties
     @IBOutlet weak var tableView: UITableView!
-    //var foods: [Food]? = []
-    var foods = [Food]()
+    var foods = [Food]() //var foods: [Food]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //***Fetching articles from News API***//
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
         loadSampleFoods()
         fetchFoods(website: "HP")
     }
     
     private func loadSampleFoods() {
         //let image1 = UIImage(cgImage: #imageLiteral(resourceName: "tomato01") as! CGImage)
-        let image1 = UIImage(named: "tomato01")
-        
-        guard let food1 = Food(name: "tomato", daysLeft: 0, image: image1!) else {
+        let image1 = UIImage(named: "avocado01")
+        let image2 = UIImage(named: "tomato01")
+
+        guard let food1 = Food(name: "Avocado", daysLeft: 0, image: image1!) else {
             fatalError("Unable to instantiate food1")
         }
         
-        //foods += [food1]
-        foods.append(food1)
+        guard let food2 = Food(name: "Tomato", daysLeft: 2, image: image2!) else {
+            fatalError("Unable to instantiate food1")
+        }
+        
+        foods += [food1,food2]
+        //foods.append(food1)
     }
     
     //MARK: Fetch food
@@ -40,8 +49,22 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     //MARK: Table View
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.foods.count
+        //return self.articles?.count ?? 0 //one-line if statement: or else return 0
+        //return 0
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodItemTableViewCell", for: indexPath) as! FoodItemTableViewCell //type
+        let cellIdentifier = "FoodItemTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FoodItemTableViewCell else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
      /*
         cell.title.text = self.articles?[indexPath.item].headline //remember to unwrap it first
         cell.desc.text = self.articles?[indexPath.item].desc
@@ -57,15 +80,9 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.foods.count
-        //return self.articles?.count ?? 0 //one-line if statement: or else return 0
-        //return 0
-    }
+
 
     /* //Initalize a view page for the specific recipe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
