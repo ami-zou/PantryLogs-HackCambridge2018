@@ -8,6 +8,37 @@
 
 import UIKit
 
-class Food: NSObject {
-
+class Food {
+    var name: String
+    var expirationDate: Date
+    var daysLeft: Int
+    var image: UIImage?
+    
+    init() {
+        name = "Food"
+        expirationDate = Date()
+        daysLeft = 0
+        image = UIImage()
+    }
+    
+    init(name: String, daysLeft: Int){
+        self.name = name
+        self.daysLeft = daysLeft
+        self.expirationDate = Date()
+        self.image = UIImage()
+    }
+    
+    init?(name: String, daysLeft: Int, image: UIImage) {
+        //test case: fail if name is empty
+        if name.isEmpty {
+            return nil
+        }
+        
+        //initalization
+        self.name = name
+        self.daysLeft = daysLeft
+        self.expirationDate = Date()
+        self.image = image
+    }
 }
+

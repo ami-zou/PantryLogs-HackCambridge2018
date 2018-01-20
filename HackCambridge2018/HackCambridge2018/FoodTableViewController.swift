@@ -15,7 +15,13 @@ class FoodTableViewController: UITableViewController {
     //MARK: Private Methods
     
     private func loadSampleFoods() {
+        let image1 = UIImage(named: "tomato01")
         
+        guard let food1 = Food(name: "tomato", daysLeft: 0, image: image1!) else {
+            fatalError("Unable to instantiate food1")
+        }
+        
+        food += [food1]
     }
     
     override func viewDidLoad() {
@@ -34,7 +40,7 @@ class FoodTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
