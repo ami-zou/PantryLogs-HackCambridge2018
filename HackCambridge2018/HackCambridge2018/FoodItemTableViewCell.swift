@@ -9,7 +9,11 @@
 import UIKit
 
 class FoodItemTableViewCell: UITableViewCell {
-
+    //MARK:Properties
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var FoodImageView: UIImageView!
+    @IBOutlet weak var DayLeftLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

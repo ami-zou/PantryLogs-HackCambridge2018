@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A6193711201389160008FD9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193710201389160008FD9A /* AppDelegate.swift */; };
-		A6193713201389160008FD9A /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193712201389160008FD9A /* FoodViewController.swift */; };
 		A6193715201389160008FD9A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193714201389160008FD9A /* RecipeViewController.swift */; };
 		A6193718201389160008FD9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6193716201389160008FD9A /* Main.storyboard */; };
 		A619371A201389160008FD9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6193719201389160008FD9A /* Assets.xcassets */; };
@@ -17,6 +16,8 @@
 		A6193733201389160008FD9A /* HackCambridge2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193732201389160008FD9A /* HackCambridge2018UITests.swift */; };
 		A619374120138CF40008FD9A /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619374020138CF40008FD9A /* UserViewController.swift */; };
 		A61937432013928A0008FD9A /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */; };
+		A61937452013B1340008FD9A /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61937442013B1340008FD9A /* Food.swift */; };
+		A61937472013B1AD0008FD9A /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61937462013B1AD0008FD9A /* FoodTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 /* Begin PBXFileReference section */
 		A619370D201389160008FD9A /* HackCambridge2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackCambridge2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6193710201389160008FD9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A6193712201389160008FD9A /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		A6193714201389160008FD9A /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		A6193717201389160008FD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6193719201389160008FD9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		A6193734201389160008FD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A619374020138CF40008FD9A /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
+		A61937442013B1340008FD9A /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		A61937462013B1AD0008FD9A /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				A6193710201389160008FD9A /* AppDelegate.swift */,
-				A6193712201389160008FD9A /* FoodViewController.swift */,
+				A61937462013B1AD0008FD9A /* FoodTableViewController.swift */,
 				A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */,
 				A6193714201389160008FD9A /* RecipeViewController.swift */,
 				A619374020138CF40008FD9A /* UserViewController.swift */,
 				A6193716201389160008FD9A /* Main.storyboard */,
+				A61937442013B1340008FD9A /* Food.swift */,
 				A6193719201389160008FD9A /* Assets.xcassets */,
 				A619371B201389160008FD9A /* LaunchScreen.storyboard */,
 				A619371E201389160008FD9A /* Info.plist */,
@@ -271,8 +274,9 @@
 				A61937432013928A0008FD9A /* FoodItemTableViewCell.swift in Sources */,
 				A6193715201389160008FD9A /* RecipeViewController.swift in Sources */,
 				A619374120138CF40008FD9A /* UserViewController.swift in Sources */,
+				A61937472013B1AD0008FD9A /* FoodTableViewController.swift in Sources */,
 				A6193711201389160008FD9A /* AppDelegate.swift in Sources */,
-				A6193713201389160008FD9A /* FoodViewController.swift in Sources */,
+				A61937452013B1340008FD9A /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
