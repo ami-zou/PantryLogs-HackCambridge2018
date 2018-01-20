@@ -74,7 +74,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //configure the cell
         cell.foodName.text = food.name
-        cell.daysLeft.text = "0 days" //String(format:"%@ days", food.daysLeft)
+        cell.daysLeft.text = "\(food.daysLeft) days" //String(format:"%@ days", food.daysLeft)
         cell.foodImage.image = food.image
         
         return cell
