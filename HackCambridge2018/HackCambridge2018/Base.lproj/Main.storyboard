@@ -329,6 +329,58 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
+        <!--Recipe-->
+        <scene sceneID="Vdb-qy-5Hc">
+            <objects>
+                <viewController storyboardIdentifier="RecipePageViewController" id="KDA-tG-RYf" customClass="RecipePageViewController" customModule="HackCambridge2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7a-ug-vlq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ow9-Gf-trD">
+                                <rect key="frame" x="161" y="307" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="Dismiss:" destination="KDA-tG-RYf" eventType="touchUpInside" id="iDH-e3-fsf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s7I-gY-4JO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="uqS-aa-PBQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLx-3A-cTP">
+                                <rect key="frame" x="116" y="-7" width="145" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QLx-3A-cTP" secondAttribute="height" multiplier="2:1" id="ww2-ox-2oy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QLx-3A-cTP" firstAttribute="width" secondItem="QLx-3A-cTP" secondAttribute="height" multiplier="2:1" id="0V3-bM-niQ"/>
+                            <constraint firstAttribute="trailing" secondItem="s7I-gY-4JO" secondAttribute="trailing" id="6yo-jr-OPq"/>
+                            <constraint firstItem="B7g-1D-T0c" firstAttribute="bottom" secondItem="ow9-Gf-trD" secondAttribute="bottom" constant="281" id="89d-p1-RRc"/>
+                            <constraint firstItem="s7I-gY-4JO" firstAttribute="top" secondItem="Z7a-ug-vlq" secondAttribute="top" id="RTY-3D-unQ"/>
+                            <constraint firstItem="s7I-gY-4JO" firstAttribute="centerX" secondItem="ow9-Gf-trD" secondAttribute="centerX" id="RdR-d6-VAD"/>
+                            <constraint firstItem="s7I-gY-4JO" firstAttribute="leading" secondItem="Z7a-ug-vlq" secondAttribute="leading" id="ZJA-Du-z3u"/>
+                            <constraint firstItem="QLx-3A-cTP" firstAttribute="centerY" secondItem="s7I-gY-4JO" secondAttribute="centerY" id="bse-FO-Ihx"/>
+                            <constraint firstItem="QLx-3A-cTP" firstAttribute="centerX" secondItem="ow9-Gf-trD" secondAttribute="centerX" id="lfe-QN-4p1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B7g-1D-T0c"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recipe" image="restaurant_icon01" id="InG-D4-FB7" userLabel="Recipe"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKc-8i-Wqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1545" y="479"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>

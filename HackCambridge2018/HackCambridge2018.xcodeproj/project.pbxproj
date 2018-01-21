@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A6035D222014154700276379 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6035D212014154700276379 /* RecipeTableViewCell.swift */; };
 		A6035D242014170400276379 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6035D232014170400276379 /* Recipe.swift */; };
+		A6035D262014639200276379 /* RecipePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6035D252014639200276379 /* RecipePageViewController.swift */; };
 		A6193711201389160008FD9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193710201389160008FD9A /* AppDelegate.swift */; };
 		A6193715201389160008FD9A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6193714201389160008FD9A /* RecipeViewController.swift */; };
 		A6193718201389160008FD9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6193716201389160008FD9A /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		A6035D212014154700276379 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipeTableViewCell.swift; path = HackCambridge2018/Recipe/RecipeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		A6035D232014170400276379 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		A6035D252014639200276379 /* RecipePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePageViewController.swift; sourceTree = "<group>"; };
 		A619370D201389160008FD9A /* HackCambridge2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackCambridge2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6193710201389160008FD9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6193714201389160008FD9A /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -164,8 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				A6193714201389160008FD9A /* RecipeViewController.swift */,
-				A6035D232014170400276379 /* Recipe.swift */,
 				A6035D212014154700276379 /* RecipeTableViewCell.swift */,
+				A6035D232014170400276379 /* Recipe.swift */,
+				A6035D252014639200276379 /* RecipePageViewController.swift */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				A6035D242014170400276379 /* Recipe.swift in Sources */,
 				A61937492013BD000008FD9A /* Food.swift in Sources */,
 				A6035D222014154700276379 /* RecipeTableViewCell.swift in Sources */,
+				A6035D262014639200276379 /* RecipePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

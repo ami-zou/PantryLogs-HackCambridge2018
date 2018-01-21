@@ -84,6 +84,18 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    //MARK: Initiate Recipe Page VC
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let recipeVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecipePageViewController") as! RecipePageViewController;
+        //let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "web") as! WebViewVC;
+        
+        //webVC.url = self.articles?[indexPath.item].url
+        
+        self.present(recipeVC, animated: true, completion: nil)
+        //self.present(webVC, animated: true, completion: nil)
+    }
+    
+    //MARK: Animation
     func animateTable() {
         tableView.reloadData()
         
