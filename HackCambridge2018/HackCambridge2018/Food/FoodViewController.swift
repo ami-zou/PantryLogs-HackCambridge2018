@@ -21,6 +21,8 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         //***Fetching articles from News API***//
+        tableView.tableFooterView = UIView(frame: CGRect.zero) //Hiding blank cells.
+        tableView.separatorInset = UIEdgeInsets.zero
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -30,6 +32,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         loadSampleFoods()
         fetchFoods(website: "HP")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     private func loadSampleFoods() {
@@ -56,6 +63,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     //MARK: Table View
     func numberOfSections(in tableView: UITableView) -> Int {
+        //return 4
         return 1
     }
     
@@ -96,6 +104,39 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    //MARK: Swipe Cell
+    //Enable cell editing methods.
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+            //self.isEditing = false
+            print("edit button tapped")
+        }
+        edit.backgroundColor = UIColor.lightGray
+    
+        
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            //self.isEditing = false
+            
+            //delete item
+            self.foods.remove(at: indexPath.row)
+            self.tableView.reloadData()
+            print("delete button tapped")
+        }
+        delete.backgroundColor = UIColor.red
+  
+        return [delete, edit]
+    }
+
     
     //MARK: Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
