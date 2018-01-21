@@ -330,71 +330,68 @@
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
         <!--Recipe-->
-        <scene sceneID="Vdb-qy-5Hc">
+        <scene sceneID="Zl1-5W-1S7">
             <objects>
-                <viewController storyboardIdentifier="RecipePageViewController" id="KDA-tG-RYf" customClass="RecipePageViewController" customModule="HackCambridge2018" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z7a-ug-vlq">
+                <viewController storyboardIdentifier="RecipePageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kCn-r3-MJe" customClass="RecipePageViewController" customModule="HackCambridge2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Dh-fe-ivh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ow9-Gf-trD">
-                                <rect key="frame" x="305" y="67" width="54" height="30"/>
-                                <state key="normal" title="Dismiss"/>
-                                <connections>
-                                    <action selector="Dismiss:" destination="KDA-tG-RYf" eventType="touchUpInside" id="iDH-e3-fsf"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s7I-gY-4JO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zcP-Uo-urB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="uqS-aa-PBQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="FeL-E0-Vqv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLx-3A-cTP">
-                                <rect key="frame" x="115" y="-7" width="145" height="73"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="QLx-3A-cTP" secondAttribute="height" multiplier="2:1" id="ww2-ox-2oy"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqP-sL-ajN">
+                                <rect key="frame" x="115" y="12" width="145" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOy-9b-hZn">
-                                <rect key="frame" x="16" y="67" width="265" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesto Chicken Pasta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-eZ-UeU">
+                                <rect key="frame" x="16" y="56" width="228" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="jKX-Oq-mbJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xSq-xc-Ap7">
-                                <rect key="frame" x="16" y="131" width="343" height="181"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pesto_chicken_pasta_01" translatesAutoresizingMaskIntoConstraints="NO" id="HdC-yp-5nU">
+                                <rect key="frame" x="16" y="119" width="343" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efj-DR-uXC">
+                                <rect key="frame" x="305" y="68" width="54" height="35"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QLx-3A-cTP" firstAttribute="width" secondItem="QLx-3A-cTP" secondAttribute="height" multiplier="2:1" id="0V3-bM-niQ"/>
-                            <constraint firstAttribute="trailing" secondItem="s7I-gY-4JO" secondAttribute="trailing" id="6yo-jr-OPq"/>
-                            <constraint firstItem="B7g-1D-T0c" firstAttribute="bottom" secondItem="ow9-Gf-trD" secondAttribute="bottom" constant="521" id="89d-p1-RRc"/>
-                            <constraint firstItem="s7I-gY-4JO" firstAttribute="top" secondItem="Z7a-ug-vlq" secondAttribute="top" id="RTY-3D-unQ"/>
-                            <constraint firstItem="s7I-gY-4JO" firstAttribute="centerX" secondItem="ow9-Gf-trD" secondAttribute="centerX" constant="-144.5" id="RdR-d6-VAD"/>
-                            <constraint firstItem="s7I-gY-4JO" firstAttribute="leading" secondItem="Z7a-ug-vlq" secondAttribute="leading" id="ZJA-Du-z3u"/>
-                            <constraint firstItem="QLx-3A-cTP" firstAttribute="centerY" secondItem="s7I-gY-4JO" secondAttribute="centerY" id="bse-FO-Ihx"/>
-                            <constraint firstItem="QLx-3A-cTP" firstAttribute="centerX" secondItem="ow9-Gf-trD" secondAttribute="centerX" constant="-144.5" id="lfe-QN-4p1"/>
+                            <constraint firstItem="zcP-Uo-urB" firstAttribute="leading" secondItem="7Dh-fe-ivh" secondAttribute="leading" id="01d-Q8-IlC"/>
+                            <constraint firstItem="DT4-eZ-UeU" firstAttribute="leading" secondItem="7Dh-fe-ivh" secondAttribute="leadingMargin" id="6wO-ef-kTA"/>
+                            <constraint firstItem="zcP-Uo-urB" firstAttribute="centerY" secondItem="iqP-sL-ajN" secondAttribute="centerY" id="6x8-u6-wi7"/>
+                            <constraint firstItem="Efj-DR-uXC" firstAttribute="leading" secondItem="DT4-eZ-UeU" secondAttribute="trailing" constant="61" id="8fu-fT-L4A"/>
+                            <constraint firstItem="zcP-Uo-urB" firstAttribute="centerX" secondItem="iqP-sL-ajN" secondAttribute="centerX" id="HJ3-nl-wXE"/>
+                            <constraint firstItem="Efj-DR-uXC" firstAttribute="centerY" secondItem="DT4-eZ-UeU" secondAttribute="centerY" constant="2" id="HQZ-TZ-Ijq"/>
+                            <constraint firstAttribute="trailing" secondItem="zcP-Uo-urB" secondAttribute="trailing" id="TTQ-0i-Adg"/>
+                            <constraint firstItem="zcP-Uo-urB" firstAttribute="top" secondItem="7Dh-fe-ivh" secondAttribute="top" id="Xej-35-qme"/>
+                            <constraint firstItem="Efj-DR-uXC" firstAttribute="top" secondItem="zcP-Uo-urB" secondAttribute="bottom" constant="8" id="aCt-Jf-uIG"/>
+                            <constraint firstItem="DT4-eZ-UeU" firstAttribute="top" secondItem="iqP-sL-ajN" secondAttribute="bottom" constant="8" symbolic="YES" id="mGz-vG-NSy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="B7g-1D-T0c"/>
+                        <viewLayoutGuide key="safeArea" id="R2f-8X-0u7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recipe" image="restaurant_icon01" id="InG-D4-FB7" userLabel="Recipe"/>
+                    <tabBarItem key="tabBarItem" title="Recipe" image="restaurant_icon01" id="gG6-0T-SKp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="recipeImage" destination="xSq-xc-Ap7" id="9Qd-mA-iUE"/>
-                        <outlet property="recipeName" destination="SOy-9b-hZn" id="XuC-Qe-A4g"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FKc-8i-Wqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08j-9P-EE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544.8" y="478.11094452773619"/>
+            <point key="canvasLocation" x="1576.8" y="528.48575712143929"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -419,6 +416,7 @@
     <resources>
         <image name="fruit_icon02" width="32" height="32"/>
         <image name="man-user" width="32" height="32"/>
+        <image name="pesto_chicken_pasta_01" width="2350" height="1632"/>
         <image name="restaurant_icon01" width="32" height="32"/>
         <image name="tomato01" width="231" height="219"/>
     </resources>
