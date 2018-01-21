@@ -71,11 +71,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
             do { //see upper comment for Json example
                //let data = str.data(using: String.Encoding.utf8, allowLossyConversion: false)!
 
-                if let jsonData = try? JSONSerialization.data(withJSONObject: (Any).self, options: []) {
-                    if let content = String(data: json, encoding: .utf8) {
-                        print(content)
-                    }
-                }
+          //      if let jsonData = try? JSONSerialization.data(withJSONObject: (Any).self, options: []) {
+          //          if let content = String(data: json, encoding: .utf8) {
+          //              print(content)
+          //          }
+          //      }
                 
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String : AnyObject]
                 
