@@ -74,7 +74,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cellIdentifier = "FoodItemTableViewCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FoodItemTableViewCell else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+            fatalError("The dequeued cell is not an instance of FoodItemTableViewCell.")
         }
      /*
         cell.title.text = self.articles?[indexPath.item].headline //remember to unwrap it first
