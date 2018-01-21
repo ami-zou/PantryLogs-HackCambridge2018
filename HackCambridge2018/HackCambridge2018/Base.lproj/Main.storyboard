@@ -359,9 +359,8 @@
                                 <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pesto_chicken_pasta_01" translatesAutoresizingMaskIntoConstraints="NO" id="HdC-yp-5nU">
-                                <rect key="frame" x="16" y="119" width="343" height="228"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pesto_chicken_pasta_01" translatesAutoresizingMaskIntoConstraints="NO" id="HdC-yp-5nU">
+                                <rect key="frame" x="16" y="119" width="343" height="225"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efj-DR-uXC">
                                 <rect key="frame" x="305" y="68" width="54" height="35"/>
@@ -369,20 +368,49 @@
                                 <state key="normal" title="Dismiss">
                                     <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="Dismiss:" destination="kCn-r3-MJe" eventType="touchUpInside" id="sbN-Pw-rg9"/>
+                                </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q8Y-8p-25f">
+                                <rect key="frame" x="16" y="364" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Ingredients"/>
+                                    <segment title="Instructions"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5ca-Bo-J0N">
+                                <rect key="frame" x="16" y="400" width="343" height="218"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zcP-Uo-urB" firstAttribute="leading" secondItem="7Dh-fe-ivh" secondAttribute="leading" id="01d-Q8-IlC"/>
+                            <constraint firstItem="R2f-8X-0u7" firstAttribute="bottom" secondItem="HdC-yp-5nU" secondAttribute="bottom" constant="274" id="6H8-nK-h4A"/>
                             <constraint firstItem="DT4-eZ-UeU" firstAttribute="leading" secondItem="7Dh-fe-ivh" secondAttribute="leadingMargin" id="6wO-ef-kTA"/>
                             <constraint firstItem="zcP-Uo-urB" firstAttribute="centerY" secondItem="iqP-sL-ajN" secondAttribute="centerY" id="6x8-u6-wi7"/>
-                            <constraint firstItem="Efj-DR-uXC" firstAttribute="leading" secondItem="DT4-eZ-UeU" secondAttribute="trailing" constant="61" id="8fu-fT-L4A"/>
+                            <constraint firstItem="Efj-DR-uXC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DT4-eZ-UeU" secondAttribute="trailing" constant="8" symbolic="YES" id="8fu-fT-L4A"/>
+                            <constraint firstItem="q8Y-8p-25f" firstAttribute="leading" secondItem="HdC-yp-5nU" secondAttribute="leading" id="9BB-XV-TE7"/>
+                            <constraint firstItem="R2f-8X-0u7" firstAttribute="trailing" secondItem="HdC-yp-5nU" secondAttribute="trailing" constant="16" id="EpU-eu-XQP"/>
                             <constraint firstItem="zcP-Uo-urB" firstAttribute="centerX" secondItem="iqP-sL-ajN" secondAttribute="centerX" id="HJ3-nl-wXE"/>
                             <constraint firstItem="Efj-DR-uXC" firstAttribute="centerY" secondItem="DT4-eZ-UeU" secondAttribute="centerY" constant="2" id="HQZ-TZ-Ijq"/>
                             <constraint firstAttribute="trailing" secondItem="zcP-Uo-urB" secondAttribute="trailing" id="TTQ-0i-Adg"/>
+                            <constraint firstAttribute="trailing" secondItem="Efj-DR-uXC" secondAttribute="trailing" constant="16" id="Tt7-mM-Vjm"/>
                             <constraint firstItem="zcP-Uo-urB" firstAttribute="top" secondItem="7Dh-fe-ivh" secondAttribute="top" id="Xej-35-qme"/>
+                            <constraint firstItem="5ca-Bo-J0N" firstAttribute="leading" secondItem="R2f-8X-0u7" secondAttribute="leading" constant="16" id="Y5B-3K-KZX"/>
                             <constraint firstItem="Efj-DR-uXC" firstAttribute="top" secondItem="zcP-Uo-urB" secondAttribute="bottom" constant="8" id="aCt-Jf-uIG"/>
+                            <constraint firstItem="R2f-8X-0u7" firstAttribute="trailing" secondItem="5ca-Bo-J0N" secondAttribute="trailing" constant="16" id="csN-We-Hd4"/>
+                            <constraint firstItem="HdC-yp-5nU" firstAttribute="leading" secondItem="R2f-8X-0u7" secondAttribute="leading" constant="16" id="djO-k3-3di"/>
+                            <constraint firstItem="HdC-yp-5nU" firstAttribute="top" secondItem="DT4-eZ-UeU" secondAttribute="bottom" constant="8" symbolic="YES" id="fvt-b6-wma"/>
+                            <constraint firstItem="5ca-Bo-J0N" firstAttribute="top" secondItem="q8Y-8p-25f" secondAttribute="bottom" constant="8" id="jMW-iS-XgF"/>
                             <constraint firstItem="DT4-eZ-UeU" firstAttribute="top" secondItem="iqP-sL-ajN" secondAttribute="bottom" constant="8" symbolic="YES" id="mGz-vG-NSy"/>
+                            <constraint firstItem="q8Y-8p-25f" firstAttribute="trailing" secondItem="HdC-yp-5nU" secondAttribute="trailing" id="qmK-0U-EFN"/>
+                            <constraint firstItem="q8Y-8p-25f" firstAttribute="top" secondItem="HdC-yp-5nU" secondAttribute="bottom" constant="20" id="seX-1o-bJs"/>
+                            <constraint firstItem="5ca-Bo-J0N" firstAttribute="bottom" secondItem="R2f-8X-0u7" secondAttribute="bottom" id="uvU-n7-6IE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R2f-8X-0u7"/>
                     </view>
