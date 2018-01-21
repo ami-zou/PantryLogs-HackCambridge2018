@@ -87,6 +87,22 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK: Initiate Recipe Page VC
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recipeVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecipePageViewController") as! RecipePageViewController;
+        
+        //Update content
+         //let indexPath = tableView.indexPathForSelectedRow
+        // let currentCell = tableView.cellForRowAtIndexPath(indexPath!)! as RecipeTableViewCell
+        
+        let recipe: Recipe
+        
+        if isFiltered {
+            recipe = filteredRecipes[indexPath.row]
+        } else {
+            recipe = recipes[indexPath.row]
+        }
+        
+        
+        recipeVC.updateRecipe(recipe: recipe)
+        
         //let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "web") as! WebViewVC;
         
         //webVC.url = self.articles?[indexPath.item].url

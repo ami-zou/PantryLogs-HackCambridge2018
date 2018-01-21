@@ -338,7 +338,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ow9-Gf-trD">
-                                <rect key="frame" x="161" y="307" width="54" height="30"/>
+                                <rect key="frame" x="305" y="67" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
                                     <action selector="Dismiss:" destination="KDA-tG-RYf" eventType="touchUpInside" id="iDH-e3-fsf"/>
@@ -352,7 +352,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLx-3A-cTP">
-                                <rect key="frame" x="116" y="-7" width="145" height="73"/>
+                                <rect key="frame" x="115" y="-7" width="145" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QLx-3A-cTP" secondAttribute="height" multiplier="2:1" id="ww2-ox-2oy"/>
                                 </constraints>
@@ -360,26 +360,41 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOy-9b-hZn">
+                                <rect key="frame" x="16" y="67" width="265" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xSq-xc-Ap7">
+                                <rect key="frame" x="16" y="131" width="343" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QLx-3A-cTP" firstAttribute="width" secondItem="QLx-3A-cTP" secondAttribute="height" multiplier="2:1" id="0V3-bM-niQ"/>
                             <constraint firstAttribute="trailing" secondItem="s7I-gY-4JO" secondAttribute="trailing" id="6yo-jr-OPq"/>
-                            <constraint firstItem="B7g-1D-T0c" firstAttribute="bottom" secondItem="ow9-Gf-trD" secondAttribute="bottom" constant="281" id="89d-p1-RRc"/>
+                            <constraint firstItem="B7g-1D-T0c" firstAttribute="bottom" secondItem="ow9-Gf-trD" secondAttribute="bottom" constant="521" id="89d-p1-RRc"/>
                             <constraint firstItem="s7I-gY-4JO" firstAttribute="top" secondItem="Z7a-ug-vlq" secondAttribute="top" id="RTY-3D-unQ"/>
-                            <constraint firstItem="s7I-gY-4JO" firstAttribute="centerX" secondItem="ow9-Gf-trD" secondAttribute="centerX" id="RdR-d6-VAD"/>
+                            <constraint firstItem="s7I-gY-4JO" firstAttribute="centerX" secondItem="ow9-Gf-trD" secondAttribute="centerX" constant="-144.5" id="RdR-d6-VAD"/>
                             <constraint firstItem="s7I-gY-4JO" firstAttribute="leading" secondItem="Z7a-ug-vlq" secondAttribute="leading" id="ZJA-Du-z3u"/>
                             <constraint firstItem="QLx-3A-cTP" firstAttribute="centerY" secondItem="s7I-gY-4JO" secondAttribute="centerY" id="bse-FO-Ihx"/>
-                            <constraint firstItem="QLx-3A-cTP" firstAttribute="centerX" secondItem="ow9-Gf-trD" secondAttribute="centerX" id="lfe-QN-4p1"/>
+                            <constraint firstItem="QLx-3A-cTP" firstAttribute="centerX" secondItem="ow9-Gf-trD" secondAttribute="centerX" constant="-144.5" id="lfe-QN-4p1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B7g-1D-T0c"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recipe" image="restaurant_icon01" id="InG-D4-FB7" userLabel="Recipe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="recipeImage" destination="xSq-xc-Ap7" id="9Qd-mA-iUE"/>
+                        <outlet property="recipeName" destination="SOy-9b-hZn" id="XuC-Qe-A4g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKc-8i-Wqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="479"/>
+            <point key="canvasLocation" x="1544.8" y="478.11094452773619"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
