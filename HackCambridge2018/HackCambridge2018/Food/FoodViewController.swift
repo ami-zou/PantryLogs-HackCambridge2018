@@ -58,7 +58,62 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: Fetch food
     func fetchFoods(website: String){
+        var urlRequest = URLRequest(url: URL(string:"https://fierce-gorge-21914.herokuapp.com/obj")! ) //put a string URL inside -- now: https://fierce-gorge-21914.herokuapp.com/obj --- real-time object list
+         
+        var urlNewsRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=the-huffington-post&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")!)
         
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            do { //see upper comment for Json example
+               //let data = str.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+
+                if let jsonData = try? JSONSerialization.data(withJSONObject: (Any).self, options: []) {
+                    if let content = String(data: json, encoding: .utf8) {
+                        print(content)
+                    }
+                }
+                
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String : AnyObject]
+                
+                if let foodsFromJson = json["objects"] as? [[String : AnyObject]]{
+                    for foodFromJson in foodsFromJson{
+                        let food = Food()
+                        if let type = foodFromJson["obj_prediction"] as? String,
+                            let exp = foodFromJson["obj_exp"] as? String
+                            {
+                            food.name = type
+                            food.daysLeft = Int(exp)!
+                        }
+                        self.foods.append(food)
+                    }
+                }
+           
+            //Test case for article
+                if let foodsFromJson = json["articles"] as? [[String : AnyObject]]{
+                    for foodFromJson in foodsFromJson{
+                        let food = Food()
+                        if let author = foodFromJson["author"] as? String
+                        {
+                            food.name = author
+                        }
+                        self.foods.append(food)
+                    }
+                }
+                
+                DispatchQueue.main.async { //run in the main thread in stead of in back
+                    self.tableView.reloadData() //reload data
+                }
+                
+            } catch let error{
+                print(error)
+            }
+        }
+        
+        task.resume() //resume the task
     }
     
     //MARK: Refresh data by adding Pull-to-Refresh func //TODO
