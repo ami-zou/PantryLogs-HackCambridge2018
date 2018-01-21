@@ -60,6 +60,8 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     func fetchFoods(website: String){
         
     }
+    
+    //MARK: Refresh data by adding Pull-to-Refresh func //TODO
 
     //MARK: Table View
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -136,7 +138,6 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
   
         return [delete, edit]
     }
-
     
     //MARK: Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

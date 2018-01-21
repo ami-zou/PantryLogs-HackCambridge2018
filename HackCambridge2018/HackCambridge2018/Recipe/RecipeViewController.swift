@@ -29,6 +29,13 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         
         loadSampleRecipe()
+        
+        animateTable()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func loadSampleRecipe(){
@@ -77,12 +84,37 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func animateTable() {
+        tableView.reloadData()
+        
+        let cells = tableView.visibleCells
+        //let cells = tableView.visibleCells()
+        
+        let tableHeight: CGFloat = tableView.bounds.size.height
+        
+        for i in cells {
+            let cell: UITableViewCell = i as UITableViewCell
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+        
+        var index = 0
+        
+        for a in cells {
+            let cell: UITableViewCell = a as UITableViewCell
+            
+            /*Swift 2
+            UIView.animateWithDuration(1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options:nil , animations: {
+                cell.transform = CGAffineTransformMakeTranslation(0, 0);
+            }, completion: nil)
+            */
+            
+            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+            }, completion: nil)
+            
+            index += 1
+        }
     }
-
-
+    
 }
 
