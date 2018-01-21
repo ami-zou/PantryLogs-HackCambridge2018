@@ -255,46 +255,46 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1xi-Wo-wBb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="260" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1xi-Wo-wBb">
                                 <rect key="frame" x="0.0" y="58" width="375" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RecipeTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeTableViewCell" rowHeight="180" id="vkS-bD-dHw" customClass="RecipeTableViewCell" customModule="HackCambridge2018" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RecipeTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeTableViewCell" rowHeight="260" id="vkS-bD-dHw" customClass="RecipeTableViewCell" customModule="HackCambridge2018" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="260"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vkS-bD-dHw" id="z1Q-Pp-RKm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="259.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wp4-lc-FjW">
-                                                    <rect key="frame" x="33" y="0.0" width="308" height="149"/>
+                                                    <rect key="frame" x="33" y="11" width="308" height="189"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-XE-bGK">
-                                                    <rect key="frame" x="33" y="157" width="138.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-XE-bGK">
+                                                    <rect key="frame" x="33" y="208" width="308" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="3um-YW-Mby"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ET: 25 mins" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvz-nO-Lmx">
-                                                    <rect key="frame" x="246.5" y="157" width="94.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ET: 25 mins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvz-nO-Lmx">
+                                                    <rect key="frame" x="246" y="228" width="94.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wp4-lc-FjW" firstAttribute="leading" secondItem="Vad-XE-bGK" secondAttribute="leading" id="1Bw-NH-esw"/>
-                                                <constraint firstItem="wp4-lc-FjW" firstAttribute="top" secondItem="z1Q-Pp-RKm" secondAttribute="top" id="4av-Bd-TIk"/>
-                                                <constraint firstItem="bvz-nO-Lmx" firstAttribute="leading" secondItem="Vad-XE-bGK" secondAttribute="trailing" constant="75" id="7gy-nk-5W7"/>
+                                                <constraint firstItem="wp4-lc-FjW" firstAttribute="top" secondItem="z1Q-Pp-RKm" secondAttribute="top" constant="11" id="4av-Bd-TIk"/>
+                                                <constraint firstItem="bvz-nO-Lmx" firstAttribute="leading" secondItem="Vad-XE-bGK" secondAttribute="trailing" constant="-95" id="7gy-nk-5W7"/>
                                                 <constraint firstItem="Vad-XE-bGK" firstAttribute="top" secondItem="wp4-lc-FjW" secondAttribute="bottom" constant="8" symbolic="YES" id="IaL-bD-x8L"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Vad-XE-bGK" secondAttribute="bottom" constant="-9" id="IrY-JJ-4zS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Vad-XE-bGK" secondAttribute="bottom" constant="20" id="IrY-JJ-4zS"/>
                                                 <constraint firstItem="wp4-lc-FjW" firstAttribute="leading" secondItem="z1Q-Pp-RKm" secondAttribute="leadingMargin" constant="18" id="JMa-6n-UJY"/>
                                                 <constraint firstItem="wp4-lc-FjW" firstAttribute="centerX" secondItem="z1Q-Pp-RKm" secondAttribute="centerX" id="TEA-Y5-QH5"/>
-                                                <constraint firstItem="Vad-XE-bGK" firstAttribute="top" secondItem="bvz-nO-Lmx" secondAttribute="top" id="W1g-fh-MlZ"/>
-                                                <constraint firstItem="wp4-lc-FjW" firstAttribute="trailing" secondItem="bvz-nO-Lmx" secondAttribute="trailing" id="ufT-n8-Zep"/>
+                                                <constraint firstItem="Vad-XE-bGK" firstAttribute="top" secondItem="bvz-nO-Lmx" secondAttribute="top" constant="-20" id="W1g-fh-MlZ"/>
+                                                <constraint firstItem="wp4-lc-FjW" firstAttribute="trailing" secondItem="bvz-nO-Lmx" secondAttribute="trailing" constant="0.5" id="ufT-n8-Zep"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

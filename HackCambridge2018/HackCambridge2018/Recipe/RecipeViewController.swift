@@ -32,7 +32,18 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func loadSampleRecipe(){
+        let image1 = UIImage(named: "pesto_chicken_pasta_01")
+        let image2 = UIImage(named: "peanut_butter_bread_01")
         
+        guard let recipe1 = Recipe(name: "Pesto Chicken Pasta", time: 80, image: image1!) else {
+            fatalError("can't initialize the recipe")
+        }
+        
+        guard let recipe2 = Recipe(name: "Peanut Butter Bread", time: 4, image: image2!) else {
+            fatalError("can't initialize the recipe")
+        }
+        
+        recipes += [recipe1, recipe2]
     }
 
   
@@ -50,6 +61,18 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RecipeTableViewCell else {
                 fatalError("The dequeued cell is not an instance of RecipeTableViewCell.")
         }
+        
+        let recipe: Recipe
+        
+        if isFiltered {
+            recipe = filteredRecipes[indexPath.row]
+        } else {
+            recipe = recipes[indexPath.row]
+        }
+        
+        cell.name.text = recipe.name
+        cell.recipeImage.image = recipe.image
+        cell.time.text = "ET: \(recipe.time ?? 0) mins"
         
         return cell
     }

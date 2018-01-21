@@ -18,4 +18,12 @@ class Recipe: NSObject {
     override init() {
         super.init()
     }
+    
+    init!(name: String, time: Int, image: UIImage){
+        self.name = name
+        self.desc = ""
+        self.image = image
+        self.time = time
+        self.steps = ""
+    }
 }
