@@ -10,26 +10,31 @@ import UIKit
 
 class FoodItemPopUpViewController: UIViewController {
 
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var foodName: UILabel!
+    //Some other variables
+    
+    var food: Food?
+    
+    @IBAction func Done(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Initialize the parmeters
+        //foodName.text = food?.name
+        image.image = food?.image
+        //some other initiations
+        
+         
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

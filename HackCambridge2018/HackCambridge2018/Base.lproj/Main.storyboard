@@ -126,13 +126,14 @@
                     <connections>
                         <outlet property="searchbar" destination="AXZ-nh-J3z" id="o5d-Hf-O80"/>
                         <outlet property="tableView" destination="ITF-5u-x4y" id="INh-sz-TB2"/>
+                        <segue destination="fCC-at-tjW" kind="show" identifier="showDetails" id="R0w-yS-2K7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="150" y="-716"/>
         </scene>
-        <!--Item-->
+        <!--Table View Controller-->
         <scene sceneID="ode-6L-XmT">
             <objects>
                 <tableViewController id="oaL-oS-Cxs" sceneMemberID="viewController">
@@ -181,12 +182,12 @@
                             <outlet property="delegate" destination="oaL-oS-Cxs" id="d9y-1q-eAo"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="3hU-Cb-AtF"/>
+                    <navigationItem key="navigationItem" id="fHE-N4-2wD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXL-uY-l1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="-716"/>
+            <point key="canvasLocation" x="1748" y="-716"/>
         </scene>
         <!--Food Item PopUp-->
         <scene sceneID="uEz-FG-Qh9">
@@ -195,13 +196,31 @@
                     <view key="view" contentMode="scaleToFill" id="vNa-FT-VPy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avocado01" translatesAutoresizingMaskIntoConstraints="NO" id="UWU-iD-EL6">
+                                <rect key="frame" x="67" y="84" width="240" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-XR-M8K">
+                                <rect key="frame" x="141" y="442" width="93" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="Done:" destination="fCC-at-tjW" eventType="touchUpInside" id="THr-zA-5Jc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7Ni-fH-LJl"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="UWU-iD-EL6" id="K83-lH-DAK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ig-fB-VAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681" y="-716"/>
+            <point key="canvasLocation" x="981.60000000000002" y="-716.49175412293857"/>
         </scene>
         <!--User Controller-->
         <scene sceneID="uwU-iK-qf9">
@@ -513,6 +532,7 @@ Divide between bowls. Top with parmesan and onion. Serve with bread.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="avocado01" width="700" height="525"/>
         <image name="fruit_icon02" width="32" height="32"/>
         <image name="man-user" width="32" height="32"/>
         <image name="pesto_chicken_pasta_01" width="2350" height="1632"/>

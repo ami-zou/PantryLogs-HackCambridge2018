@@ -162,6 +162,20 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    //MARK: Cell Popup Page
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let selectedIndex = indexPath.row
+        performSegue(withIdentifier:"showDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? FoodItemPopUpViewController{
+            destination.food = foods[(tableView.indexPathForSelectedRow?.row)!]
+            
+        }
+        
+    }
+    
     //MARK: Swipe Cell
     //Enable cell editing methods.
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
