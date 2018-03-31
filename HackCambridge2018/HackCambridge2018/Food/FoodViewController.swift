@@ -58,9 +58,9 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: Fetch food
     func fetchFoods(website: String){
-        var urlRequest = URLRequest(url: URL(string:"https://fierce-gorge-21914.herokuapp.com/obj")! ) //put a string URL inside -- now: https://fierce-gorge-21914.herokuapp.com/obj --- real-time object list
+        let urlRequest = URLRequest(url: URL(string:"https://fierce-gorge-21914.herokuapp.com/obj")! ) //put a string URL inside -- now: https://fierce-gorge-21914.herokuapp.com/obj --- real-time object list
          
-        var urlNewsRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=the-huffington-post&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")!)
+        let urlNewsRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=the-huffington-post&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")!)
         
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if error != nil {

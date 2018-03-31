@@ -22,6 +22,7 @@
 		A61937472013B1AD0008FD9A /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61937462013B1AD0008FD9A /* FoodTableViewController.swift */; };
 		A61937492013BD000008FD9A /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61937482013BD000008FD9A /* Food.swift */; };
 		A619374B2013E0660008FD9A /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619374A2013E0660008FD9A /* FoodViewController.swift */; };
+		A63686D4206FB583007A0833 /* FoodItemPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63686D3206FB583007A0833 /* FoodItemPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A61937462013B1AD0008FD9A /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		A61937482013BD000008FD9A /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		A619374A2013E0660008FD9A /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		A63686D3206FB583007A0833 /* FoodItemPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				A619374A2013E0660008FD9A /* FoodViewController.swift */,
 				A61937422013928A0008FD9A /* FoodItemTableViewCell.swift */,
 				A61937482013BD000008FD9A /* Food.swift */,
+				A63686D3206FB583007A0833 /* FoodItemPopUpViewController.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A63686D4206FB583007A0833 /* FoodItemPopUpViewController.swift in Sources */,
 				A61937432013928A0008FD9A /* FoodItemTableViewCell.swift in Sources */,
 				A619374B2013E0660008FD9A /* FoodViewController.swift in Sources */,
 				A6193715201389160008FD9A /* RecipeViewController.swift in Sources */,

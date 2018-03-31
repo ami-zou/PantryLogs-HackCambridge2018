@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="150" y="-716"/>
         </scene>
         <!--Item-->
         <scene sceneID="ode-6L-XmT">
@@ -186,7 +186,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXL-uY-l1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544.8" y="-244.22788605697153"/>
+            <point key="canvasLocation" x="922" y="-716"/>
+        </scene>
+        <!--Food Item PopUp-->
+        <scene sceneID="uEz-FG-Qh9">
+            <objects>
+                <viewController storyboardIdentifier="foodItemPopup" title="Food Item PopUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fCC-at-tjW" customClass="FoodItemPopUpViewController" customModule="HackCambridge2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vNa-FT-VPy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Ni-fH-LJl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ig-fB-VAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1681" y="-716"/>
         </scene>
         <!--User Controller-->
         <scene sceneID="uwU-iK-qf9">
@@ -280,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLp-IR-H9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="773.16341829085468"/>
+            <point key="canvasLocation" x="150" y="773"/>
         </scene>
         <!--Recipe Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -378,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="151" y="9"/>
         </scene>
         <!--Recipe-->
         <scene sceneID="Zl1-5W-1S7">
@@ -475,7 +490,7 @@ Divide between bowls. Top with parmesan and onion. Serve with bread.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08j-9P-EE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8" y="528.48575712143929"/>
+            <point key="canvasLocation" x="866" y="9"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -494,7 +509,7 @@ Divide between bowls. Top with parmesan and onion. Serve with bread.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-751" y="10"/>
         </scene>
     </scenes>
     <resources>
