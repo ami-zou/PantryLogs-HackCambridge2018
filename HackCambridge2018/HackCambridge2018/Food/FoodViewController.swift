@@ -178,8 +178,15 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if let destination = segue.destination as? FoodItemPopUpViewController{
-            destination.food = foods[(tableView.indexPathForSelectedRow?.row)!]
+            if isSearching {
+                destination.food = filteredFoods[(tableView.indexPathForSelectedRow?.row)!]
+            }else{
+                destination.food = foods[(tableView.indexPathForSelectedRow?.row)!]
+            }
+            
+            
             
         }
         
@@ -188,7 +195,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func unwindFromFoodItemVC(_ sender: UIStoryboardSegue){
         if sender.source is FoodItemPopUpViewController{
             if let SenderVC = sender.source as? FoodItemPopUpViewController{
-                foods[(tableView.indexPathForSelectedRow?.row)!].daysLeft = SenderVC.days ;
+                if isSearching{
+                    filteredFoods[(tableView.indexPathForSelectedRow?.row)!].daysLeft = SenderVC.days ;
+                }else{
+                    foods[(tableView.indexPathForSelectedRow?.row)!].daysLeft = SenderVC.days ;
+                }
             }
             tableView.reloadData()
         }
@@ -229,8 +240,6 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK: Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchbar.text == nil || searchbar.text == "" {
-            print("it's 103")
-            
             isSearching = false
             
             view.endEditing(true)
@@ -250,7 +259,14 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
            
     
             tableView.reloadData()
+            
+            //searchbar.resignFirstResponder()
         }
+    }
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchbar.resignFirstResponder()
     }
     
    //Search Bar Extending UISearchResultsUpdating

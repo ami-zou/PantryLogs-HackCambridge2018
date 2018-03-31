@@ -9,6 +9,7 @@
 import UIKit
 
 class FoodItemPopUpViewController: UIViewController {
+    @IBOutlet weak var PopView: UIView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var expiracy: UITextField!
@@ -39,7 +40,11 @@ class FoodItemPopUpViewController: UIViewController {
         self.pickerView.dataSource = self as? UIPickerViewDataSource
         self.pickerView.delegate = self as? UIPickerViewDelegate
     */
-        
+        self.PopView.addGestureRecognizer(UITapGestureRecognizer(target: self.PopView, action: #selector(UIView.endEditing(_:))))
+       // self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: Selector("endEditing:”)))
+      
+        //UPDATE: In fact, can just use number pad instead - no need to valid input as Int nor send alert!
+        self.expiracy.keyboardType = UIKeyboardType.decimalPad
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,6 +63,8 @@ class FoodItemPopUpViewController: UIViewController {
             }
         }
     }
+    
+    
     
     //MARK: - Pickerview method
     /*
