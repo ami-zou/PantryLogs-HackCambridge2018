@@ -22,6 +22,7 @@
 		A61937472013B1AD0008FD9A /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61937462013B1AD0008FD9A /* FoodTableViewController.swift */; };
 		A61937492013BD000008FD9A /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61937482013BD000008FD9A /* Food.swift */; };
 		A619374B2013E0660008FD9A /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619374A2013E0660008FD9A /* FoodViewController.swift */; };
+		A62E321E207031D400C4EA5C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E321D207031D400C4EA5C /* AboutViewController.swift */; };
 		A63686D4206FB583007A0833 /* FoodItemPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63686D3206FB583007A0833 /* FoodItemPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		A61937462013B1AD0008FD9A /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		A61937482013BD000008FD9A /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		A619374A2013E0660008FD9A /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		A62E321D207031D400C4EA5C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A63686D3206FB583007A0833 /* FoodItemPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				A619374020138CF40008FD9A /* UserViewController.swift */,
+				A62E321D207031D400C4EA5C /* AboutViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				A6193715201389160008FD9A /* RecipeViewController.swift in Sources */,
 				A619374120138CF40008FD9A /* UserViewController.swift in Sources */,
 				A61937472013B1AD0008FD9A /* FoodTableViewController.swift in Sources */,
+				A62E321E207031D400C4EA5C /* AboutViewController.swift in Sources */,
 				A6193711201389160008FD9A /* AppDelegate.swift in Sources */,
 				A6035D242014170400276379 /* Recipe.swift in Sources */,
 				A61937492013BD000008FD9A /* Food.swift in Sources */,
