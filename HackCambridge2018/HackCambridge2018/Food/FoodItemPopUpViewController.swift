@@ -9,7 +9,6 @@
 import UIKit
 
 class FoodItemPopUpViewController: UIViewController {
-
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var foodName: UILabel!
     //Some other variables

@@ -166,6 +166,15 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //let selectedIndex = indexPath.row
         performSegue(withIdentifier:"showDetails", sender: self)
+    
+    /*
+        let storyboard = UIStoryboard(name: "FoodItemPopUpView", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FoodItemPopUpViewController")
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
+    */
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
