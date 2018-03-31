@@ -11,10 +11,6 @@ import UIKit
 class RecipePageViewController: UIViewController {
     @IBOutlet weak var recipeImage : UIImageView!
     @IBOutlet weak var recipeName: UILabel!
-   // @IBOutlet weak var tabIng: UITabBarItem!
-   // @IBOutlet weak var tabStep: UITabBarItem!
-   // @IBOutlet weak var ingredients: UIView!
-   // @IBOutlet weak var steps: UIView!
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var segment: UISegmentedControl!
     
@@ -39,21 +35,10 @@ class RecipePageViewController: UIViewController {
     
     func updateRecipe(recipe: Recipe){
         self.recipe = recipe
-        
-//        update()
     }
- /*
-    func update(){
-        recipeImage?.image = recipe?.image
-        recipeName?.text = recipe.name
-        content.text = recipe?.ingredients
-        
-        self.loadView()
-    }
-*/
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func indexChange(_ sender: UISegmentedControl) {

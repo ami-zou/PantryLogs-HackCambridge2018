@@ -35,9 +35,9 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    //TODO: Connect with a recipe database/website
     func loadSampleRecipe(){
         let image1 = UIImage(named: "pesto_chicken_pasta_01")
         let image2 = UIImage(named: "peanut_butter_bread_01")
@@ -45,16 +45,17 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let recipe1 = Recipe(name: "Pesto Chicken Pasta", time: 80, image: image1!) else {
             fatalError("can't initialize the recipe")
         }
-        recipe1.updateSteps(new_steps: "Step 1\nCook pasta in a saucepan of boiling, salted water, following packet directions, until tender. Drain, reserving 1/4 cup liquid.\nStep 2\nReturn pasta to pan over medium-low heat. Add reserved liquid, cream, pesto, onion, chicken and tomato. Stir to combine. Cook, stirring, for 1 to 2 minutes or until heated through.\nStep 3\nDivide between bowls. Top with parmesan and onion. Serve with bread.")
+        recipe1.updateSteps(new_steps: "Step 1\nCook pasta in a saucepan of boiling, salted water, following packet directions, until tender. Drain, reserving 1/4 cup liquid.\n\nStep 2\nReturn pasta to pan over medium-low heat. Add reserved liquid, cream, pesto, onion, chicken and tomato. Stir to combine. Cook, stirring, for 1 to 2 minutes or until heated through.\n\nStep 3\nDivide between bowls. Top with parmesan and onion. Serve with bread.")
         recipe1.updateIngredients(new_ingredients: " 350g Barilla Penne Rigate \n 300ml light cream \n 1/2 cup basil pesto\n 3 green onions, sliced \n 1/2 cups skinless shredded roast chicken (see related recipe) \n 1/2 cup drained sun-dried tomatoes, thinly sliced \n 1/3 cup finely grated parmesan cheese \n Thinly sliced green onions, to serve \n Crusty bread, to serve")
         
         guard let recipe2 = Recipe(name: "Peanut Butter Bread", time: 4, image: image2!) else {
             fatalError("can't initialize the recipe")
         }
+        recipe2.updateIngredients(new_ingredients: " loaf\n jelly \n peanut butter")
+        recipe2.updateSteps(new_steps: "Step 1 \nPut peanut butter and jelly on one slice of bread \n\nStep 2\nPut another slice of bread on top")
         
         recipes += [recipe1, recipe2]
     }
-    //TODO: Connect with a recipe database/website
 
   
     //MARK: Table View
@@ -119,7 +120,6 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.reloadData()
         
         let cells = tableView.visibleCells
-        //let cells = tableView.visibleCells()
         
         let tableHeight: CGFloat = tableView.bounds.size.height
         
@@ -132,13 +132,7 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         for a in cells {
             let cell: UITableViewCell = a as UITableViewCell
-            
-            /*Swift 2
-            UIView.animateWithDuration(1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options:nil , animations: {
-                cell.transform = CGAffineTransformMakeTranslation(0, 0);
-            }, completion: nil)
-            */
-            
+
             UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
                 cell.transform = CGAffineTransform(translationX: 0, y: 0);
             }, completion: nil)
