@@ -40,8 +40,8 @@
                                     <constraint firstAttribute="height" constant="59" id="Tnb-gI-DtL"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d72-oM-whS">
-                                <rect key="frame" x="122.5" y="-2.5" width="131" height="65.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d72-oM-whS">
+                                <rect key="frame" x="115.5" y="-6" width="145.5" height="72.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d72-oM-whS" secondAttribute="height" multiplier="2:1" id="LzN-Ag-hgD"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ITF-5u-x4y">
-                                <rect key="frame" x="0.0" y="101.5" width="375" height="516.5"/>
+                                <rect key="frame" x="0.0" y="105" width="375" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodItemTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodItemTableViewCell" rowHeight="90" id="kl0-yf-IDa" customClass="FoodItemTableViewCell" customModule="HackCambridge2018" customModuleProvider="target">
@@ -315,6 +315,9 @@
                                 <rect key="frame" x="72" y="513" width="230" height="30"/>
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="About"/>
+                                <connections>
+                                    <segue destination="ZGL-ZK-psp" kind="show" id="dRN-fa-2yx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9i-HJ-u02">
                                 <rect key="frame" x="72" y="470" width="230" height="30"/>
@@ -328,7 +331,7 @@
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Contact Us"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOB-sA-XkL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOB-sA-XkL">
                                 <rect key="frame" x="114" y="-6" width="146" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="Jp1-Da-a4y"/>
@@ -375,6 +378,95 @@
             </objects>
             <point key="canvasLocation" x="150" y="773"/>
         </scene>
+        <!--About -->
+        <scene sceneID="JOA-Jj-96h">
+            <objects>
+                <viewController storyboardIdentifier="AboutPage" id="ZGL-ZK-psp" userLabel="About " sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Tv-dE-70s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKe-TK-0WT">
+                                <rect key="frame" x="106" y="547" width="163" height="30"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XMP-Jv-iET"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Got it!"/>
+                                <connections>
+                                    <segue destination="1Ki-rH-o5y" kind="show" id="Qfb-7j-08W"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fbz-dI-5of">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cn2-iE-Shf">
+                                <rect key="frame" x="114" y="-6" width="146" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="cn4-2X-81r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="emX-25-kNd">
+                                <rect key="frame" x="29" y="90" width="316" height="439"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">PantryLogs solves food waste by notifying users their food expiration dates and sending them recipe recommendations based on the types of food they already have.
+
+Pantry Log has a device that scans and recognizes the food items and their expiration dates using Computer Visioning: 
+  1. Users put food items in this device. 
+  2. The camera captures pictures and sends them to the micro-controller. 
+  3. The micro-controller processes the pictures, extract food item information and its expiration dates. 
+  4. Then it pushes all information to our mobile app.
+
+The mobile app is solely developed by Ami Zou. It automatically logs all the food item types and their expiration dates. Users can edit the food expiration dates, swipe ‘delete’ when they finish eating an item, and search for specific food items. PantryLog sends user notifications when some food items are close to expire. Another feature is to give user recipe recommendations based on the types of food they already have. Users can also filter the recipe based on how much time they have.
+
+In the future we aim to build a food sharing community where users can set up calorie goals and exchange food with their friends.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cn2-iE-Shf" firstAttribute="centerY" secondItem="fbz-dI-5of" secondAttribute="centerY" id="3Wn-7i-Hd5"/>
+                            <constraint firstItem="Lnf-Wd-1RM" firstAttribute="bottom" secondItem="ZKe-TK-0WT" secondAttribute="bottom" constant="41" id="8CT-2j-LDM"/>
+                            <constraint firstItem="fbz-dI-5of" firstAttribute="top" secondItem="2Tv-dE-70s" secondAttribute="top" id="9qg-dZ-6kb"/>
+                            <constraint firstItem="Cn2-iE-Shf" firstAttribute="leading" secondItem="Lnf-Wd-1RM" secondAttribute="leading" constant="114" id="K3v-Ow-ktm"/>
+                            <constraint firstItem="Cn2-iE-Shf" firstAttribute="centerX" secondItem="2Tv-dE-70s" secondAttribute="centerX" id="Lns-eZ-YpD"/>
+                            <constraint firstItem="Cn2-iE-Shf" firstAttribute="top" secondItem="2Tv-dE-70s" secondAttribute="topMargin" constant="-26" id="V9E-Ay-VeN"/>
+                            <constraint firstItem="Cn2-iE-Shf" firstAttribute="centerX" secondItem="ZKe-TK-0WT" secondAttribute="centerX" id="Y9g-2L-BjK"/>
+                            <constraint firstItem="fbz-dI-5of" firstAttribute="leading" secondItem="2Tv-dE-70s" secondAttribute="leading" id="dKS-PS-KjG"/>
+                            <constraint firstItem="Cn2-iE-Shf" firstAttribute="centerX" secondItem="fbz-dI-5of" secondAttribute="centerX" id="k4U-5u-VkM"/>
+                            <constraint firstItem="ZKe-TK-0WT" firstAttribute="leading" secondItem="Lnf-Wd-1RM" secondAttribute="leading" constant="106" id="sl2-Un-5Rl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lnf-Wd-1RM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="man-user" id="CSe-yx-ByK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tPE-h8-SW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="771.36431784107947"/>
+        </scene>
+        <!--Contact Us-->
+        <scene sceneID="CIT-yF-LL8">
+            <objects>
+                <viewController id="eah-ob-DPY" userLabel="Contact Us" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQi-fx-dnv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cy5-1K-GR8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1J-9s-MkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1582" y="772"/>
+        </scene>
         <!--Recipe Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -390,8 +482,8 @@
                                     <constraint firstAttribute="height" constant="60" id="DtB-bA-xUd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-jB-o1h">
-                                <rect key="frame" x="122" y="-4" width="131" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-jB-o1h">
+                                <rect key="frame" x="115" y="-7.5" width="145.5" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rcv-jB-o1h" secondAttribute="height" multiplier="2:1" id="cYu-Mu-fbL"/>
                                 </constraints>
@@ -488,8 +580,8 @@
                                     <constraint firstAttribute="height" constant="60" id="FeL-E0-Vqv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqP-sL-ajN">
-                                <rect key="frame" x="122" y="12" width="131" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqP-sL-ajN">
+                                <rect key="frame" x="115" y="12" width="145.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -601,4 +693,7 @@
         <image name="restaurant_icon01" width="32" height="32"/>
         <image name="tomato01" width="231" height="219"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qfb-7j-08W"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,7 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     
+    //TODO: Add filter function and floating recipe page
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var floatItems: UIImage!
     
