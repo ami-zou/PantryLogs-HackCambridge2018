@@ -185,6 +185,15 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    @IBAction func unwindFromFoodItemVC(_ sender: UIStoryboardSegue){
+        if sender.source is FoodItemPopUpViewController{
+            if let SenderVC = sender.source as? FoodItemPopUpViewController{
+                foods[(tableView.indexPathForSelectedRow?.row)!].daysLeft = Int(SenderVC.days)!;
+            }
+            tableView.reloadData()
+        }
+    }
+    
     //MARK: Swipe Cell
     //Enable cell editing methods.
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
