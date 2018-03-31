@@ -45,6 +45,8 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let recipe1 = Recipe(name: "Pesto Chicken Pasta", time: 80, image: image1!) else {
             fatalError("can't initialize the recipe")
         }
+        recipe1.updateSteps(new_steps: "Step 1\nCook pasta in a saucepan of boiling, salted water, following packet directions, until tender. Drain, reserving 1/4 cup liquid.\nStep 2\nReturn pasta to pan over medium-low heat. Add reserved liquid, cream, pesto, onion, chicken and tomato. Stir to combine. Cook, stirring, for 1 to 2 minutes or until heated through.\nStep 3\nDivide between bowls. Top with parmesan and onion. Serve with bread.")
+        recipe1.updateIngredients(new_ingredients: " 350g Barilla Penne Rigate \n 300ml light cream \n 1/2 cup basil pesto\n 3 green onions, sliced \n 1/2 cups skinless shredded roast chicken (see related recipe) \n 1/2 cup drained sun-dried tomatoes, thinly sliced \n 1/3 cup finely grated parmesan cheese \n Thinly sliced green onions, to serve \n Crusty bread, to serve")
         
         guard let recipe2 = Recipe(name: "Peanut Butter Bread", time: 4, image: image2!) else {
             fatalError("can't initialize the recipe")
@@ -52,6 +54,7 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         recipes += [recipe1, recipe2]
     }
+    //TODO: Connect with a recipe database/website
 
   
     //MARK: Table View
@@ -89,15 +92,15 @@ class RecipeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let recipeVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecipePageViewController") as! RecipePageViewController;
         
         //Update content
-         //let indexPath = tableView.indexPathForSelectedRow
-        // let currentCell = tableView.cellForRowAtIndexPath(indexPath!)! as RecipeTableViewCell
+        let indexPath = tableView.indexPathForSelectedRow
+        //let currentCell = tableView.cellForRow(at: indexPath!)! as! RecipeTableViewCell
         
         let recipe: Recipe
         
         if isFiltered {
-            recipe = filteredRecipes[indexPath.row]
+            recipe = filteredRecipes[(indexPath?.row)!]
         } else {
-            recipe = recipes[indexPath.row]
+            recipe = recipes[(indexPath?.row)!]
         }
         
         

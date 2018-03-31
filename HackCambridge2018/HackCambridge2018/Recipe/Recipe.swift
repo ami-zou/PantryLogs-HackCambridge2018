@@ -14,6 +14,7 @@ class Recipe: NSObject {
     var image: UIImage?
     var time: Int?
     var steps: String?
+    var ingredients: String?
     
     override init() {
         super.init()
@@ -25,5 +26,14 @@ class Recipe: NSObject {
         self.image = image
         self.time = time
         self.steps = ""
+        self.ingredients = ""
+    }
+    
+    func updateIngredients(new_ingredients: String){
+        self.ingredients = new_ingredients
+    }
+    
+    func updateSteps(new_steps: String){
+        self.steps = new_steps
     }
 }

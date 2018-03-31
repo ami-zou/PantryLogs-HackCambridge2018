@@ -494,8 +494,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesto Chicken Pasta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-eZ-UeU">
-                                <rect key="frame" x="16" y="56" width="228" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-eZ-UeU">
+                                <rect key="frame" x="16" y="56" width="149.5" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="jKX-Oq-mbJ"/>
                                 </constraints>
@@ -503,7 +503,7 @@
                                 <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pesto_chicken_pasta_01" translatesAutoresizingMaskIntoConstraints="NO" id="HdC-yp-5nU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HdC-yp-5nU">
                                 <rect key="frame" x="16" y="119" width="343" height="225"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efj-DR-uXC">
@@ -529,12 +529,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5ca-Bo-J0N">
                                 <rect key="frame" x="16" y="400" width="343" height="218"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Step 1
-Cook pasta in a saucepan of boiling, salted water, following packet directions, until tender. Drain, reserving 1/4 cup liquid.
-Step 2
-Return pasta to pan over medium-low heat. Add reserved liquid, cream, pesto, onion, chicken and tomato. Stir to combine. Cook, stirring, for 1 to 2 minutes or until heated through.
-Step 3
-Divide between bowls. Top with parmesan and onion. Serve with bread.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -603,7 +597,6 @@ Divide between bowls. Top with parmesan and onion. Serve with bread.</string>
         <image name="avocado01" width="700" height="525"/>
         <image name="fruit_icon02" width="32" height="32"/>
         <image name="man-user" width="32" height="32"/>
-        <image name="pesto_chicken_pasta_01" width="2350" height="1632"/>
         <image name="profile" width="480" height="480"/>
         <image name="restaurant_icon01" width="32" height="32"/>
         <image name="tomato01" width="231" height="219"/>

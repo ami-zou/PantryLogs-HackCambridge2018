@@ -9,8 +9,8 @@
 import UIKit
 
 class RecipePageViewController: UIViewController {
-    @IBOutlet weak var recipeImage : UIImageView?
-    @IBOutlet weak var recipeName: UILabel?
+    @IBOutlet weak var recipeImage : UIImageView!
+    @IBOutlet weak var recipeName: UILabel!
    // @IBOutlet weak var tabIng: UITabBarItem!
    // @IBOutlet weak var tabStep: UITabBarItem!
    // @IBOutlet weak var ingredients: UIView!
@@ -19,39 +19,38 @@ class RecipePageViewController: UIViewController {
     @IBOutlet weak var segment: UISegmentedControl!
     
     
-    var recipe: Recipe!
+    var recipe: Recipe?
     
     @IBAction func Dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        recipeImage.image = recipe?.image
+        recipeName.text = recipe?.name
+        segment.selectedSegmentIndex = 0
+        content.text = recipe?.ingredients
+        //update Recipe
+        
+        //     self.navigationController?.interactivePopGestureRecognizer?.delegate = self as! UIGestureRecognizerDelegate
+        //     self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
     
     func updateRecipe(recipe: Recipe){
         self.recipe = recipe
         
-        update()
+//        update()
     }
-    
+ /*
     func update(){
-        recipeImage?.image = recipe.image
+        recipeImage?.image = recipe?.image
         recipeName?.text = recipe.name
+        content.text = recipe?.ingredients
         
         self.loadView()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        segment.selectedSegmentIndex = 0;
-        content.text = "ingredients"
-        //update Recipe
-        
-        
-        
-   //     self.navigationController?.interactivePopGestureRecognizer?.delegate = self as! UIGestureRecognizerDelegate
-   //     self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-    }
-
+*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,9 +59,9 @@ class RecipePageViewController: UIViewController {
     @IBAction func indexChange(_ sender: UISegmentedControl) {
         switch segment.selectedSegmentIndex {
         case 0:
-            content.text = "Current Ingredient"
+            content.text = recipe?.ingredients
         case 1:
-            content.text = "Current steps"
+            content.text = recipe?.steps
         default:
             ()
         }
