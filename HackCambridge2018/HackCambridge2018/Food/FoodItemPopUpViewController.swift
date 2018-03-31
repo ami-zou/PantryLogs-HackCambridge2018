@@ -40,9 +40,10 @@ class FoodItemPopUpViewController: UIViewController {
         self.pickerView.dataSource = self as? UIPickerViewDataSource
         self.pickerView.delegate = self as? UIPickerViewDelegate
     */
+        
+        //Tap to exist editing
         self.PopView.addGestureRecognizer(UITapGestureRecognizer(target: self.PopView, action: #selector(UIView.endEditing(_:))))
-       // self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: Selector("endEditing:”)))
-      
+     
         //UPDATE: In fact, can just use number pad instead - no need to valid input as Int nor send alert!
         self.expiracy.keyboardType = UIKeyboardType.decimalPad
     }
