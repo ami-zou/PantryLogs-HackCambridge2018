@@ -188,7 +188,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXL-uY-l1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="-716"/>
+            <point key="canvasLocation" x="1583" y="-716"/>
         </scene>
         <!--Food Item PopUp-->
         <scene sceneID="uEz-FG-Qh9">
@@ -279,7 +279,7 @@
                 <exit id="ExW-RG-tsQ" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="1vK-aA-6uz"/>
             </objects>
-            <point key="canvasLocation" x="981.60000000000002" y="-716.49175412293857"/>
+            <point key="canvasLocation" x="865" y="-716"/>
         </scene>
         <!--User Controller-->
         <scene sceneID="uwU-iK-qf9">
@@ -522,6 +522,9 @@
                                     <segment title="Ingredients"/>
                                     <segment title="Instructions"/>
                                 </segments>
+                                <connections>
+                                    <action selector="indexChange:" destination="kCn-r3-MJe" eventType="valueChanged" id="bVn-gQ-dTV"/>
+                                </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5ca-Bo-J0N">
                                 <rect key="frame" x="16" y="400" width="343" height="218"/>
@@ -565,6 +568,12 @@ Divide between bowls. Top with parmesan and onion. Serve with bread.</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recipe" image="restaurant_icon01" id="gG6-0T-SKp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="content" destination="5ca-Bo-J0N" id="fuB-VY-zo3"/>
+                        <outlet property="recipeImage" destination="HdC-yp-5nU" id="nBs-5u-LpT"/>
+                        <outlet property="recipeName" destination="DT4-eZ-UeU" id="fAF-Qr-sIy"/>
+                        <outlet property="segment" destination="q8Y-8p-25f" id="7yB-Z3-6G5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08j-9P-EE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

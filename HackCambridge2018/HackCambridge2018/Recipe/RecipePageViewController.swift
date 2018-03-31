@@ -11,10 +11,12 @@ import UIKit
 class RecipePageViewController: UIViewController {
     @IBOutlet weak var recipeImage : UIImageView?
     @IBOutlet weak var recipeName: UILabel?
-    @IBOutlet weak var tabIng: UITabBarItem!
-    @IBOutlet weak var tabStep: UITabBarItem!
-    @IBOutlet weak var ingredients: UIView!
-    @IBOutlet weak var steps: UIView!
+   // @IBOutlet weak var tabIng: UITabBarItem!
+   // @IBOutlet weak var tabStep: UITabBarItem!
+   // @IBOutlet weak var ingredients: UIView!
+   // @IBOutlet weak var steps: UIView!
+    @IBOutlet weak var content: UITextView!
+    @IBOutlet weak var segment: UISegmentedControl!
     
     
     var recipe: Recipe!
@@ -22,6 +24,8 @@ class RecipePageViewController: UIViewController {
     @IBAction func Dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+
     
     func updateRecipe(recipe: Recipe){
         self.recipe = recipe
@@ -38,9 +42,10 @@ class RecipePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        segment.selectedSegmentIndex = 0;
+        content.text = "ingredients"
         //update Recipe
+        
         
         
    //     self.navigationController?.interactivePopGestureRecognizer?.delegate = self as! UIGestureRecognizerDelegate
@@ -50,6 +55,17 @@ class RecipePageViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func indexChange(_ sender: UISegmentedControl) {
+        switch segment.selectedSegmentIndex {
+        case 0:
+            content.text = "Current Ingredient"
+        case 1:
+            content.text = "Current steps"
+        default:
+            ()
+        }
     }
  
 /*
@@ -76,7 +92,8 @@ class RecipePageViewController: UIViewController {
             }
         }
     }
-*/
+     
+     */
     /*
     // MARK: - Navigation
 
