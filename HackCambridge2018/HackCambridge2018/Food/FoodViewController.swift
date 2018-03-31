@@ -188,7 +188,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func unwindFromFoodItemVC(_ sender: UIStoryboardSegue){
         if sender.source is FoodItemPopUpViewController{
             if let SenderVC = sender.source as? FoodItemPopUpViewController{
-                foods[(tableView.indexPathForSelectedRow?.row)!].daysLeft = Int(SenderVC.days)!;
+                foods[(tableView.indexPathForSelectedRow?.row)!].daysLeft = SenderVC.days ;
             }
             tableView.reloadData()
         }

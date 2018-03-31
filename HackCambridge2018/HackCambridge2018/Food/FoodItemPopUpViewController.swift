@@ -16,7 +16,7 @@ class FoodItemPopUpViewController: UIViewController {
     //Some other variables
     
     var food: Food?
-    var days: String!
+    var days: Int!
     //var dateArray = [Int]()
     
   //  @IBAction func Done(_ sender: Any) {
@@ -31,6 +31,7 @@ class FoodItemPopUpViewController: UIViewController {
         //foodName.text = food?.name
         image.image = food?.image
         expiracy.text = "\(food?.daysLeft ?? 0)"
+        days = food?.daysLeft
         //some other initiations
        
     /*Initialize pickerView
@@ -43,7 +44,18 @@ class FoodItemPopUpViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let newDaysLeft = expiracy.text {
-            days = expiracy.text
+            
+            if Int(newDaysLeft) != nil {
+                days = Int(newDaysLeft)
+            }else{
+                //alert
+                //print("wrong input")
+                let alert = UIAlertController(title: "Invalid Input", message: "Please type a valid number of left days", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Oki Doki", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
+            }
         }
     }
     
