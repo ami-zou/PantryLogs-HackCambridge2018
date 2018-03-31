@@ -9,6 +9,9 @@
 import UIKit
 
 class UserViewController: UIViewController {
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var userEmail: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

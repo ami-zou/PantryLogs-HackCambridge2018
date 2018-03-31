@@ -373,6 +373,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="User" image="man-user" id="46d-8u-l5g"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="userEmail" destination="VAf-rJ-dQA" id="pnK-0j-i2j"/>
+                        <outlet property="userImage" destination="okC-h0-pcq" id="DYZ-FW-Tv3"/>
+                        <outlet property="username" destination="9MH-eA-S6e" id="S2M-g7-2tv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLp-IR-H9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -694,6 +699,7 @@ In the future we aim to build a food sharing community where users can set up ca
         <image name="tomato01" width="231" height="219"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dRN-fa-2yx"/>
         <segue reference="Qfb-7j-08W"/>
     </inferredMetricsTieBreakers>
 </document>
