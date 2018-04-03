@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -127,7 +127,7 @@
                     <connections>
                         <outlet property="searchbar" destination="AXZ-nh-J3z" id="o5d-Hf-O80"/>
                         <outlet property="tableView" destination="ITF-5u-x4y" id="INh-sz-TB2"/>
-                        <segue destination="fCC-at-tjW" kind="show" identifier="showDetails" action="showDetailViewController:sender:" id="tma-ve-WH9"/>
+                        <segue destination="fCC-at-tjW" kind="show" identifier="showDetails" id="tma-ve-WH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -325,7 +325,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PantryLogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2H-nf-5eI">
-                                <rect key="frame" x="114.5" y="13" width="146" height="73"/>
+                                <rect key="frame" x="115" y="13" width="146" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="g2H-nf-5eI" secondAttribute="height" multiplier="2:1" id="7c7-GL-NIx"/>
                                 </constraints>
@@ -347,18 +347,15 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KT-Sp-8KW">
                                 <rect key="frame" x="73" y="564" width="229" height="30"/>
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2KT-Sp-8KW" secondAttribute="height" multiplier="229:30" id="JuM-d9-roo"/>
-                                </constraints>
                                 <state key="normal" title="Contact Us"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2KT-Sp-8KW" secondAttribute="trailing" constant="73" id="4gm-KE-gQ0"/>
+                            <constraint firstItem="2KT-Sp-8KW" firstAttribute="leading" secondItem="a9i-HJ-u02" secondAttribute="leading" id="1o2-Bh-OIb"/>
                             <constraint firstItem="9MH-eA-S6e" firstAttribute="leading" secondItem="pah-uz-3yx" secondAttribute="leading" constant="72" id="6ZB-ra-BzM"/>
                             <constraint firstItem="VAf-rJ-dQA" firstAttribute="trailing" secondItem="9MH-eA-S6e" secondAttribute="trailing" id="6bP-HZ-Cfv"/>
-                            <constraint firstItem="2KT-Sp-8KW" firstAttribute="top" secondItem="c2y-5Y-hSk" secondAttribute="bottom" constant="29" id="96e-Na-tu2"/>
+                            <constraint firstItem="2KT-Sp-8KW" firstAttribute="top" secondItem="c2y-5Y-hSk" secondAttribute="bottom" constant="29" id="8dc-vr-DBv"/>
                             <constraint firstItem="okC-h0-pcq" firstAttribute="top" secondItem="K13-bs-ENi" secondAttribute="bottom" constant="35" id="E6v-OD-CV1"/>
                             <constraint firstItem="g2H-nf-5eI" firstAttribute="centerY" secondItem="K13-bs-ENi" secondAttribute="centerY" constant="10" id="N6d-ia-ymC"/>
                             <constraint firstItem="K13-bs-ENi" firstAttribute="centerX" secondItem="okC-h0-pcq" secondAttribute="centerX" id="RIv-vr-an3"/>
@@ -370,7 +367,6 @@
                             <constraint firstItem="g2H-nf-5eI" firstAttribute="width" secondItem="g2H-nf-5eI" secondAttribute="height" multiplier="2:1" id="dKh-5J-NRf"/>
                             <constraint firstItem="K13-bs-ENi" firstAttribute="leading" secondItem="vwU-C4-1Tt" secondAttribute="leading" id="eIN-fv-qBA"/>
                             <constraint firstItem="c2y-5Y-hSk" firstAttribute="trailing" secondItem="VAf-rJ-dQA" secondAttribute="trailing" id="fdK-0J-QOX"/>
-                            <constraint firstItem="2KT-Sp-8KW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a9i-HJ-u02" secondAttribute="leading" id="gD0-hd-5uB"/>
                             <constraint firstItem="VAf-rJ-dQA" firstAttribute="top" secondItem="9MH-eA-S6e" secondAttribute="bottom" constant="8" symbolic="YES" id="h9V-AA-54p"/>
                             <constraint firstItem="VAf-rJ-dQA" firstAttribute="leading" secondItem="9MH-eA-S6e" secondAttribute="leading" id="hQo-aq-qIG"/>
                             <constraint firstItem="okC-h0-pcq" firstAttribute="trailing" secondItem="9MH-eA-S6e" secondAttribute="trailing" id="i1U-JD-YRm"/>
@@ -379,6 +375,7 @@
                             <constraint firstItem="K13-bs-ENi" firstAttribute="top" secondItem="vwU-C4-1Tt" secondAttribute="top" id="kcr-lc-29y"/>
                             <constraint firstItem="K13-bs-ENi" firstAttribute="centerX" secondItem="g2H-nf-5eI" secondAttribute="centerX" id="mvL-zs-t0O"/>
                             <constraint firstItem="a9i-HJ-u02" firstAttribute="centerX" secondItem="g2H-nf-5eI" secondAttribute="centerX" id="s4d-6k-1JD"/>
+                            <constraint firstItem="2KT-Sp-8KW" firstAttribute="trailing" secondItem="c2y-5Y-hSk" secondAttribute="trailing" id="vP5-dd-98c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pah-uz-3yx"/>
                     </view>
@@ -417,7 +414,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="emX-25-kNd">
                                 <rect key="frame" x="29" y="94" width="314" height="448"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">PantryLogs solves food waste by notifying users their food expiration dates and sending them recipe recommendations based on the types of food they already have.
+                                <string key="text">PantryLogs solves food waste by notifying users their food expiration dates and sending them recipe recommendations based on the types of food they already have.
 
 Pantry Log has a device that scans and recognizes the food items and their expiration dates using Computer Visioning: 
   1. Users put food items in this device. 
@@ -427,7 +424,7 @@ Pantry Log has a device that scans and recognizes the food items and their expir
 
 The mobile app is solely developed by Ami Zou. It automatically logs all the food item types and their expiration dates. Users can edit the food expiration dates, swipe ‘delete’ when they finish eating an item, and search for specific food items. PantryLog sends user notifications when some food items are close to expire. Another feature is to give user recipe recommendations based on the types of food they already have. Users can also filter the recipe based on how much time they have.
 
-In the future we aim to build a food sharing community where users can set up calorie goals and exchange food with their friends.</mutableString>
+In the future we aim to build a food sharing community where users can set up calorie goals and exchange food with their friends.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
