@@ -1,0 +1,10 @@
+# PantryLogs-HackCambridge2018
+A system that sends you notifications about food expiration dates and recipe recommendations based on the food you have :D 
+
+## Video Demo
+[Demo](https://www.youtube.com/watch?v=kDVDNskHhn8)
+
+## Blog
+[Microsoft Blog](https://blogs.msdn.microsoft.com/uk_faculty_connection/2018/03/06/pantry-log-microsoft-cognitive-iot-and-mobile-app-for-managing-your-fridge-food-stock/)
+
+
